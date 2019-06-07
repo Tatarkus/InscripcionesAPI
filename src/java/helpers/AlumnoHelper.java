@@ -21,13 +21,13 @@ public class AlumnoHelper {
     
      public AlumnoHelper(){
         this.session = HibernateUtil.getSessionFactory().openSession();
-        Query q = session.createQuery("from Usuario");
+        Query q = session.createQuery("from Alumno");
         alumnos = (List<Alumno>) q.list();
     }
     
     public void updatePersonas(){
         
-        Query q = session.createQuery("from Usuario");
+        Query q = session.createQuery("from Alumno");
         alumnos = (List<Alumno>) q.list();
     }
     
