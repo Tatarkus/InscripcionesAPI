@@ -43,7 +43,7 @@ public class GenericResource {
         AlumnoHelper ah = new AlumnoHelper();
         
         Gson gson = new Gson();
-        String alumnos = gson.toJson(ah.getPersonas());
+        String alumnos = gson.toJson(ah.getAlumnos());
         
         
     return alumnos;    

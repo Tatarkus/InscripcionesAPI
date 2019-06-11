@@ -25,13 +25,13 @@ public class AlumnoHelper {
         alumnos = (List<Alumno>) q.list();
     }
     
-    public void updatePersonas(){
+    public void updateAlumnos(){
         
         Query q = session.createQuery("from Alumno");
         alumnos = (List<Alumno>) q.list();
     }
     
-    public List getPersonas(){
+    public List getAlumnos(){
         return alumnos;
     }
 }

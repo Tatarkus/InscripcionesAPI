@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package server;
+package websocket;
 
+import helpers.AlumnoHelper;
 import javax.websocket.OnMessage;
 import javax.websocket.server.ServerEndpoint;
 
@@ -14,10 +15,14 @@ import javax.websocket.server.ServerEndpoint;
  */
 @ServerEndpoint("/endpoint")
 public class WSEndpoint {
-
+    AlumnoHelper ah = new AlumnoHelper();
     @OnMessage
     public String onMessage(String message) {
-        return null;
+        if(message.equals("cargar")){
+            return String.valueOf(ah.getAlumnos().size());
+        } else{
+            return "0";
+        }
     }
     
 }
