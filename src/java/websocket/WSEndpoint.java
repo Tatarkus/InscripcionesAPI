@@ -18,6 +18,7 @@ public class WSEndpoint {
     AlumnoHelper ah = new AlumnoHelper();
     @OnMessage
     public String onMessage(String message) {
+        System.out.println("ENVIANDO MENSAJE...");
         if(message.equals("cargar")){
             return String.valueOf(ah.getAlumnos().size());
         } else{

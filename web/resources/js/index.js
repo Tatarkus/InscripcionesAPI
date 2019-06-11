@@ -1,14 +1,9 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 
-var wsUri = getRootUri() + "/InscripcionesAPI/faces/endpoint";
+var wsUri = getRootUri() + "/InscripcionesAPI/endpoint";
 
 function getRootUri(){
-	return	"ws//" + 
+	return	"ws://" + 
 			(document.location.hostname == "" ? "localhost" : document.location.hostname) +
 			":" +
 			(document.location.port == "" ? "8080" : document.location.port)
@@ -29,7 +24,7 @@ function init() {
 }
 
 function onOpen(evt) {
-    console.log("CONETADO");
+    console.log("CONECTADO");
 }
 function onMessage(evt) {
     console.log("SE RECIBE: "+evt.data);
@@ -39,7 +34,7 @@ function onError(evt){
     console.log("ERROR!");
 }
 function doSend(message) {
-    console.log("Enviado: " + message);
+    console.log("Enviado mensaje: " + message);
     websocket.send(message);
 }
 window.addEventListener("load",init,false);
