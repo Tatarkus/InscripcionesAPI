@@ -29,8 +29,7 @@ public class WSEndpoint {
             
             for (Alumno alumno : (List<Alumno>)ah.getAlumnos()) {
                 json = json + gson.toJson(alumno)+',';
-                if(contador == 20)
-                    break;
+
             }
             json = json.substring(0, json.length()-1);
             json=json+']';

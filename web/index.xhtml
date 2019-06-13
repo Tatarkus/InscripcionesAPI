@@ -13,10 +13,11 @@
     <h:body>
         <f:view>          
             <h:form id="UsuarioViewForm" prependId="false" >
-                <h:panelGrid id="mi_tabla" columns="6" styleClass="table-secondary" border="1" cellpadding="5" cellspacing="1">
+                <h:panelGrid id="mi_tabla" columns="7" styleClass="table-secondary" border="1" cellpadding="5" cellspacing="1">
                         <f:facet name = "header">
                             <h:outputText value = "Usuarios" style = "display:block; text-align:center"/>
                         </f:facet>
+                        <h:outputText value="n°"/>
                         <h:outputText value="Nombre"/>
                         <h:outputText value="Apellido Paterno"/>
                         <h:outputText value="Apellido Materno"/>
@@ -26,13 +27,13 @@
                         <f:facet name = "footer">
                             <h:panelGroup style = "display:block; text-align:center">
                                 <h:commandButton type="button" id = "cargar" value = "Cargar" onclick="doSend('cargar')"/>
-                                <h:outputText value="cantidad"/>
+                                
                             </h:panelGroup>
                         </f:facet>
                     </h:panelGrid>
             </h:form>
         </f:view>
-           <p id="demo"></p>
+           <h:outputText id="cantidad" value="Cantidad de Alumnos:"/>
     </h:body>
 </html>
 

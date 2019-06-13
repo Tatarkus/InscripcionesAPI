@@ -46,15 +46,42 @@ function procesarMensaje(json){
     //console.log(alumnos[0].nombre);
     alumnos = JSON.parse(json);
     var tableRef = document.getElementById('mi_tabla').getElementsByTagName('tbody')[0];
-    var newRow   = tableRef.insertRow(tableRef.rows.length);
-    var newCell  = newRow.insertCell(0);
-    var newText  = document.createTextNode(alumnos[0].nombre);
-    newCell.appendChild(newText);
-    //for (var i = alumnos.length - 1; i >= 0; i--) {
-    //    document.getElementById("mi_tabla").innerHTML += "<tr>";
+    var contador = 0; 
+    for (var i = alumnos.length - 1; i >= 0 && contador < 20; i--) {
+        var newRow   = tableRef.insertRow(tableRef.rows.length);
 
-        
-    //}
+        var newCell  = newRow.insertCell(0);
+        var newText  = document.createTextNode(i+1);
+        newCell.appendChild(newText);
+
+        var newCell  = newRow.insertCell(1);
+        var newText  = document.createTextNode(alumnos[i].nombre);
+        newCell.appendChild(newText);
+
+        var newCell  = newRow.insertCell(2);
+        var newText  = document.createTextNode(alumnos[i].apPaterno);
+        newCell.appendChild(newText);
+
+        var newCell  = newRow.insertCell(3);
+        var newText  = document.createTextNode(alumnos[i].apMaterno);
+        newCell.appendChild(newText);
+
+        var newCell  = newRow.insertCell(4);
+        var newText  = document.createTextNode(alumnos[i].correo);
+        newCell.appendChild(newText);
+
+        var newCell  = newRow.insertCell(5);
+        var newText  = document.createTextNode(alumnos[i].sexo);
+        newCell.appendChild(newText);
+
+        var newCell  = newRow.insertCell(6);
+        var newText  = document.createTextNode(alumnos[i].comuna);
+        newCell.appendChild(newText);
+        contador++;
+        console.log(contador);
+
+    }
+    document.getElementById("cantidad").innerHTML = "Cantidad de Alumnos: "+alumnos.length;
     
 }
 window.addEventListener("load",init,false);
