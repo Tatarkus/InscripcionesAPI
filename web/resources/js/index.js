@@ -27,8 +27,9 @@ function onOpen(evt) {
     console.log("CONECTADO");
 }
 function onMessage(evt) {
-    console.log("SE RECIBE: "+evt.data);
-    document.getElementById("cantidad") = evt.data;
+    console.log("SE RECIBE "+evt);
+    procesarMensaje(evt.data);
+    //document.getElementById("cantidad") = "10";
 }
 function onError(evt){
     console.log("ERROR!");
@@ -36,5 +37,24 @@ function onError(evt){
 function doSend(message) {
     console.log("Enviado mensaje: " + message);
     websocket.send(message);
+}
+
+function procesarMensaje(json){
+
+    
+   // console.log(alumnos.length);
+    //console.log(alumnos[0].nombre);
+    alumnos = JSON.parse(json);
+    var tableRef = document.getElementById('mi_tabla').getElementsByTagName('tbody')[0];
+    var newRow   = tableRef.insertRow(tableRef.rows.length);
+    var newCell  = newRow.insertCell(0);
+    var newText  = document.createTextNode(alumnos[0].nombre);
+    newCell.appendChild(newText);
+    //for (var i = alumnos.length - 1; i >= 0; i--) {
+    //    document.getElementById("mi_tabla").innerHTML += "<tr>";
+
+        
+    //}
+    
 }
 window.addEventListener("load",init,false);

@@ -32,11 +32,12 @@ public class WSEndpoint {
                 if(contador == 20)
                     break;
             }
+            json = json.substring(0, json.length()-1);
             json=json+']';
             System.out.println("ENVIANDO MENSAJE: " + json);
 
 
-            return String.valueOf(ah.getAlumnos().size());
+            return json;
         } else{
             System.out.println("ENVIANDO MENSAJE: 0");
             return "0";
