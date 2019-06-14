@@ -1,13 +1,16 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated Jun 7, 2019 5:55:31 PM by Hibernate Tools 4.3.1 -->
+<!-- Generated Jun 14, 2019 3:56:13 PM by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="pojos.Alumno" table="alumno" catalog="InscripcionesWs" optimistic-lock="version">
-        <id name="run" type="int">
-            <column name="run" />
-            <generator class="assigned" />
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
         </id>
+        <property name="run" type="int">
+            <column name="run" not-null="true" />
+        </property>
         <property name="dv" type="string">
             <column name="dv" length="1" not-null="true" />
         </property>

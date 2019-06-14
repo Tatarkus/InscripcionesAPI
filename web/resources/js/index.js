@@ -42,7 +42,7 @@ function doSend(message) {
 function procesarMensaje(json){
 
     
-   // console.log(alumnos.length);
+    console.log(json);
     //console.log(alumnos[0].nombre);
     alumnos = JSON.parse(json);
     var tableRef = document.getElementById('mi_tabla').getElementsByTagName('tbody')[0];
@@ -78,7 +78,7 @@ function procesarMensaje(json){
         var newText  = document.createTextNode(alumnos[i].comuna);
         newCell.appendChild(newText);
         contador++;
-        console.log(contador);
+ 
 
     }
     document.getElementById("cantidad").innerHTML = "Cantidad de Alumnos: "+alumnos.length;

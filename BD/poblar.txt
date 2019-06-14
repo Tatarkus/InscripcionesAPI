@@ -1,10 +1,13 @@
 
 
+insert into alumno (id, run, dv, nombre, ap_materno, ap_paterno, fec_nac, sexo, correo, comuna) 
+	values (1000000,'8','Primero','Ingresado','A la BD','1999-11-01','masculino','mail.trucho@alumnos.duoc.cl','Quinta Normal');
+	
 insert into alumno (run, dv, nombre, ap_materno, ap_paterno, fec_nac, sexo, correo, comuna) 
 	values (20093434,'8','Tomás','Farías','Donoso','1999-11-01','masculino','tom.farias@alumnos.duoc.cl','Quinta Normal');
 
 insert into alumno (run, dv, nombre, ap_materno, ap_paterno, fec_nac, sexo, correo, comuna) 
-	values (19428209,'1','Cecilia','Donoso','Moscoso','1996-13-06','femenino','cec.donoso@alumnos.duoc.cl','Quinta Normal');
+	values (19428209,'1','Cecilia','Donoso','Moscoso','1996-12-06','femenino','cec.donoso@alumnos.duoc.cl','Quinta Normal');
 
 insert into alumno (run, dv, nombre, ap_materno, ap_paterno, fec_nac, sexo, correo, comuna) 
 	values (18183419,'0','Gustavo','Moraga','Burk','1995-12-04','masculino','gus.moraga@alumnos.duoc.cl','Providencia');
@@ -13,7 +16,7 @@ insert into alumno (run, dv, nombre, ap_materno, ap_paterno, fec_nac, sexo, corr
 	values (17428848,'8','Juan','Zuñiga','Perez','1993-11-03','masculino','jua.zuñiga@alumnos.duoc.cl','Conchalí');
 
 insert into alumno (run, dv, nombre, ap_materno, ap_paterno, fec_nac, sexo, correo, comuna) 
-	values (20133619,'k','Matías','Fuentes','Salinas','1995-12-04','masculino','mat.fuentes@alumnos.duoc.cl','Quinta Normal');
+	values (17305233,'2','Matías','Fuentes','Salinas','1989-10-20','masculino','mat.fuentes@alumnos.duoc.cl','Quinta Normal');
 
 insert into alumno (run, dv, nombre, ap_materno, ap_paterno, fec_nac, sexo, correo, comuna) 
 	values (21443616,'3','Vicente','Vergara','Paredes','2000-06-18','masculino','vic.vergara@alumnos.duoc.cl','Maipu');
@@ -53,3 +56,12 @@ insert into alumno (run, dv, nombre, ap_materno, ap_paterno, fec_nac, sexo, corr
 
 insert into alumno (run, dv, nombre, ap_materno, ap_paterno, fec_nac, sexo, correo, comuna) 
 	values (19543213,'3','Jeremy','Fuentes','Rodriguez','1993-01-28','masculino','jer.@alumnos.duoc.cl','Maipu');
+	
+insert into alumno (run, dv, nombre, ap_materno, ap_paterno, fec_nac, sexo, correo, comuna) 
+	values (1000001,'8','AntePenultimo','Ingresado','A la BD','1999-11-01','masculino','mail.trucho2@alumnos.duoc.cl','Quinta Normal');
+	
+insert into alumno (run, dv, nombre, ap_materno, ap_paterno, fec_nac, sexo, correo, comuna) 
+	values (1000002,'8','Penultimo','Ingresado','A la BD','1999-11-01','masculino','mail.trucho3@alumnos.duoc.cl','Quinta Normal');
+	
+insert into alumno (run, dv, nombre, ap_materno, ap_paterno, fec_nac, sexo, correo, comuna) 
+	values (1000003,'8','Ultimo','Ingresado','A la BD','1999-11-01','masculino','mail.trucho4@alumnos.duoc.cl','Quinta Normal');

@@ -1,5 +1,5 @@
 package pojos;
-// Generated Jun 7, 2019 5:55:30 PM by Hibernate Tools 4.3.1
+// Generated Jun 14, 2019 3:56:12 PM by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -10,6 +10,7 @@ import java.util.Date;
 public class Alumno  implements java.io.Serializable {
 
 
+     private Integer id;
      private int run;
      private String dv;
      private String nombre;
@@ -35,6 +36,13 @@ public class Alumno  implements java.io.Serializable {
        this.comuna = comuna;
     }
    
+    public Integer getId() {
+        return this.id;
+    }
+    
+    public void setId(Integer id) {
+        this.id = id;
+    }
     public int getRun() {
         return this.run;
     }
